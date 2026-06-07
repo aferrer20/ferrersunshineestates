@@ -1,0 +1,279 @@
+/* ============================================================
+   THE VAULT MARKETING CO — Design Tokens
+   colors_and_type.css
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Cormorant+SC:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600;700&display=swap');
+
+/* ============================================================
+   BASE COLOR PALETTE
+   ============================================================ */
+:root {
+  /* Primary — Forest Green */
+  --color-green-900: #1A2E26;
+  --color-green-800: #2C4A3E;   /* PRIMARY — hero, CTAs, nav */
+  --color-green-700: #3D6355;
+  --color-green-600: #4E7C6C;
+  --color-green-500: #7A9A8A;   /* SECONDARY — accents, dividers */
+  --color-green-300: #B3CCC3;
+  --color-green-100: #DFF0E8;
+
+  /* Accent — Gold */
+  --color-gold-700: #9A7640;
+  --color-gold-600: #B8935A;
+  --color-gold-500: #C9A96E;    /* PRIMARY GOLD — decorative, highlights */
+  --color-gold-400: #D9BF8E;
+  --color-gold-200: #EDD9B4;
+  --color-gold-100: #F5EDDA;
+
+  /* Blush Pink */
+  --color-pink-500: #D4948A;
+  --color-pink-400: #E0AFA4;
+  --color-pink-300: #E8C4B4;    /* SOFT PINK — light bg, testimonials */
+  --color-pink-200: #F0D5CC;
+  --color-pink-100: #F7EAE5;
+
+  /* Neutrals — Warm Earthy */
+  --color-cream-900: #2A2420;
+  --color-cream-700: #6B5C4E;
+  --color-cream-600: #8C7B68;   /* secondary text */
+  --color-cream-500: #A89882;
+  --color-cream-300: #D4C5B0;
+  --color-cream-200: #E8DECA;
+  --color-cream-100: #F2EAD3;   /* CREAM — warm light background */
+  --color-cream-50:  #FAF7F0;   /* near-white */
+
+  /* Dark / Text */
+  --color-charcoal: #2A2A2A;
+  --color-charcoal-soft: #3D3530;
+
+  /* ============================================================
+     SEMANTIC COLOR TOKENS
+     ============================================================ */
+
+  /* Backgrounds */
+  --bg-primary:       var(--color-green-800);    /* dark hero sections */
+  --bg-secondary:     var(--color-cream-100);    /* warm cream sections */
+  --bg-tertiary:      var(--color-pink-100);     /* blush soft sections */
+  --bg-card:          var(--color-cream-50);     /* card backgrounds */
+  --bg-overlay:       rgba(44, 74, 62, 0.88);   /* dark overlay on images */
+
+  /* Text */
+  --text-on-dark:     var(--color-cream-50);     /* text on green bg */
+  --text-on-light:    var(--color-charcoal);     /* text on cream bg */
+  --text-secondary:   var(--color-cream-600);    /* muted text */
+  --text-accent:      var(--color-gold-500);     /* gold accent text */
+  --text-link:        var(--color-green-800);
+  --text-link-hover:  var(--color-gold-500);
+
+  /* Borders & Dividers */
+  --border-gold:      var(--color-gold-500);
+  --border-subtle:    var(--color-cream-300);
+  --border-green:     var(--color-green-500);
+  --divider:          1px solid var(--color-gold-500);
+
+  /* Interactive */
+  --cta-bg:           var(--color-green-800);
+  --cta-bg-hover:     var(--color-green-900);
+  --cta-text:         var(--color-cream-50);
+  --cta-outline-bg:   transparent;
+  --cta-outline-border: var(--color-green-800);
+  --cta-outline-text: var(--color-green-800);
+
+  /* Focus ring */
+  --focus-ring: 0 0 0 3px rgba(201, 169, 110, 0.45);
+
+  /* ============================================================
+     TYPOGRAPHY — FONT FAMILIES
+     ============================================================ */
+  --font-display:  'Cormorant Garamond', 'Georgia', serif;
+  --font-sc:       'Cormorant SC', 'Cormorant Garamond', serif;
+  --font-sans:     'Jost', 'Helvetica Neue', Arial, sans-serif;
+
+  /* ============================================================
+     TYPOGRAPHY — TYPE SCALE
+     ============================================================ */
+  --text-hero:    clamp(64px, 8vw, 96px);
+  --text-display: clamp(48px, 5vw, 72px);
+  --text-h1:      clamp(36px, 4vw, 56px);
+  --text-h2:      clamp(28px, 3vw, 44px);
+  --text-h3:      clamp(22px, 2.5vw, 32px);
+  --text-h4:      clamp(18px, 2vw, 24px);
+  --text-body-lg: 18px;
+  --text-body:    16px;
+  --text-small:   14px;
+  --text-xs:      12px;
+  --text-label:   11px;
+
+  /* ============================================================
+     TYPOGRAPHY — LINE HEIGHTS
+     ============================================================ */
+  --lh-display:   1.05;
+  --lh-heading:   1.15;
+  --lh-body:      1.65;
+  --lh-relaxed:   1.8;
+
+  /* ============================================================
+     TYPOGRAPHY — LETTER SPACING
+     ============================================================ */
+  --ls-tight:    -0.02em;
+  --ls-normal:    0;
+  --ls-wide:      0.08em;
+  --ls-wider:     0.15em;
+  --ls-widest:    0.25em;
+
+  /* ============================================================
+     SPACING SCALE (8px base unit)
+     ============================================================ */
+  --space-1:    4px;
+  --space-2:    8px;
+  --space-3:    12px;
+  --space-4:    16px;
+  --space-5:    24px;
+  --space-6:    32px;
+  --space-7:    48px;
+  --space-8:    64px;
+  --space-9:    96px;
+  --space-10:   128px;
+  --space-11:   192px;
+  --space-12:   256px;
+
+  /* ============================================================
+     BORDER RADII
+     ============================================================ */
+  --radius-xs:   2px;
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   16px;
+  --radius-full: 9999px;
+
+  /* ============================================================
+     SHADOWS
+     ============================================================ */
+  --shadow-sm:   0 1px 4px rgba(44, 74, 62, 0.10);
+  --shadow-md:   0 4px 24px rgba(44, 74, 62, 0.12);
+  --shadow-lg:   0 8px 48px rgba(44, 74, 62, 0.18);
+  --shadow-xl:   0 16px 64px rgba(44, 74, 62, 0.24);
+  --shadow-gold: 0 4px 24px rgba(201, 169, 110, 0.20);
+
+  /* ============================================================
+     TRANSITIONS
+     ============================================================ */
+  --transition-fast:   150ms ease;
+  --transition-base:   300ms ease;
+  --transition-slow:   600ms ease;
+  --transition-luxury: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ============================================================
+     LAYOUT
+     ============================================================ */
+  --max-width:        1280px;
+  --max-width-narrow: 800px;
+  --section-pad-y:    var(--space-11);
+  --section-pad-x:    var(--space-8);
+}
+
+/* ============================================================
+   SEMANTIC ELEMENT STYLES
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
+  color: var(--text-on-light);
+  background-color: var(--bg-secondary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, .h1 {
+  font-family: var(--font-display);
+  font-size: var(--text-h1);
+  font-weight: 600;
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-tight);
+  color: var(--text-on-light);
+}
+
+h2, .h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 500;
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-tight);
+}
+
+h3, .h3 {
+  font-family: var(--font-sans);
+  font-size: var(--text-h3);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: var(--ls-normal);
+}
+
+h4, .h4 {
+  font-family: var(--font-sans);
+  font-size: var(--text-h4);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+p {
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
+  color: var(--text-secondary);
+  max-width: 65ch;
+}
+
+.display {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: 600;
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-tight);
+}
+
+.hero-text {
+  font-family: var(--font-display);
+  font-size: var(--text-hero);
+  font-weight: 700;
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-tight);
+}
+
+.eyebrow {
+  font-family: var(--font-sc);
+  font-size: var(--text-label);
+  font-weight: 500;
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  color: var(--text-accent);
+}
+
+.eyebrow-flanked::before { content: '— '; }
+.eyebrow-flanked::after  { content: ' —'; }
+
+a {
+  color: var(--text-link);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+a:hover { color: var(--text-link-hover); }
+
+/* Utility: dark section text overrides */
+.dark-section {
+  background-color: var(--bg-primary);
+  color: var(--text-on-dark);
+}
+.dark-section h1,
+.dark-section h2,
+.dark-section h3,
+.dark-section h4,
+.dark-section .display,
+.dark-section .hero-text { color: var(--text-on-dark); }
+.dark-section p { color: rgba(250, 247, 240, 0.72); }
+.dark-section .eyebrow { color: var(--color-gold-400); }

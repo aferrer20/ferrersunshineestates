@@ -1,0 +1,8 @@
+# Netlify configuration for Ferrer Sunshine Estates
+# Static site (no build step) + serverless function for live Airbnb calendar sync.
+
+[build]
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
