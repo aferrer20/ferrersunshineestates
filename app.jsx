@@ -7,7 +7,7 @@ const { useState, useEffect, useMemo, useRef, useCallback } = React;
 // ============================================================
 // Photo manifest
 // ============================================================
-const P = "uploads/5343-6th-ave-n-st-petersburg-fl-33710/";
+const P = "";
 const photos = {
   heroDusk:    P + "1-1000023735.jpg",
   heroPatio:   P + "2-1000023736.jpg",

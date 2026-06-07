@@ -7,7 +7,7 @@ const { useState, useEffect, useMemo, useRef } = React;
 // ============================================================
 // Photo manifest
 // ============================================================
-const S = "uploads/garden-suite/";
+const S = "";
 const photos = {
   livingWide:    S + "01-living-wide.jpg",
   livingSofa:    S + "02-living-sofa.jpg",
@@ -692,7 +692,7 @@ function OtherProperty() {
           <div>
             <a href="index.html" style={{ display: 'block' }}>
               <div className="editorial-img">
-                <img src="uploads/5343-6th-ave-n-st-petersburg-fl-33710/14-Exteriors (12).jpg" alt="The Residence — pool & bungalow" />
+                <img src="14-Exteriors (12).jpg" alt="The Residence — pool & bungalow" />
                 <div className="caption">The Residence · 2 BR · Private Pool</div>
               </div>
             </a>
