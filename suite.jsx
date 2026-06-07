@@ -128,7 +128,7 @@ function Hero({ onBookClick }) {
         <div className="avail-pill"><span className="avail-dot" /> Now booking · Live availability</div>
         <div className="hero-eyebrow">A Private Guest Suite · St. Petersburg, Florida</div>
         <h1 className="hero-title">
-          Your private St.&nbsp;Pete<br />retreat — <em>gate, garden,</em><br />and all.</h1>
+          Private entrance.<br />Fenced yard. <em>All yours.</em></h1>
         <p className="hero-sub">
           A self-contained one-bedroom suite with its own entrance and a fully fenced
           yard. Pet friendly. No minimum stay. Minutes from the beaches, shops, and downtown St.&nbsp;Pete.
