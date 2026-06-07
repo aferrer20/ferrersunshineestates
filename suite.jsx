@@ -130,8 +130,8 @@ function Hero({ onBookClick }) {
         <h1 className="hero-title">
           Private entrance.<br />Fenced yard. <em>All yours.</em></h1>
         <p className="hero-sub">
-          A self-contained one-bedroom suite with its own entrance and a fully fenced
-          yard. Pet friendly. No minimum stay. Minutes from the beaches, shops, and downtown St.&nbsp;Pete.
+          A bright one-bedroom hideaway with its own private entrance and a fully fenced
+          yard to call your own. Minutes from the beaches, shops, and downtown St.&nbsp;Pete.
         </p>
         <div className="hero-actions">
           <button className="btn btn-gold" onClick={onBookClick}>
@@ -181,7 +181,7 @@ function StatRow() {
       <div className="stat-row">
         <div className="stat"><div className="stat-num">1<em>/1</em></div><div className="stat-label">Bedroom / Bath</div></div>
         <div className="stat"><div className="stat-num">2</div><div className="stat-label">Guests, Comfortably</div></div>
-        <div className="stat"><div className="stat-num">∞</div><div className="stat-label">No Minimum Stay</div></div>
+        <div className="stat"><div className="stat-num"><em>✓</em></div><div className="stat-label">Fully Fenced Yard</div></div>
         <div className="stat"><div className="stat-num">1</div><div className="stat-label">Private Entrance</div></div>
       </div>
     </div>
@@ -210,14 +210,13 @@ function Welcome() {
               Private, polished,<br /><em style={{ fontStyle: 'italic', color: 'var(--color-gold-600)' }}>and entirely yours.</em>
             </h2>
             <p style={{ fontSize: 17, lineHeight: 1.7, color: 'var(--color-cream-700)', marginBottom: 20, fontWeight: 300 }}>
-              A self-contained one-bedroom guest suite attached to a private home — but with
-              its own separate entrance and a fully fenced backyard to call your own. Quiet,
-              sun-filled, and freshly finished, with a queen bedroom, a full bath with a
-              walk-in glass shower, and an open living-kitchen made for easy, unhurried stays.
+              A warm, light-filled one-bedroom retreat with its very own private entrance.
+              Inside you&rsquo;ll find a restful queen bedroom, a full bath with a walk-in glass
+              shower, and an open living-kitchen — bright, easy, and ready the moment you arrive.
             </p>
             <p style={{ fontSize: 17, lineHeight: 1.7, color: 'var(--color-cream-700)', marginBottom: 36, fontWeight: 300 }}>
-              Bring the dog — the suite is pet friendly and the yard is fully fenced. Stay a
-              single night or settle in for a season; there's no minimum. Under five minutes
+              Out back, a fully fenced yard is yours alone — a private spot for morning coffee
+              or an evening wind-down. And you&rsquo;re close to everything: under five minutes
               to shopping and dining, fifteen to the Gulf beaches, twenty to downtown St. Pete.
             </p>
             <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
@@ -241,10 +240,10 @@ function Welcome() {
 // Amenities
 // ============================================================
 const AMENITIES = [
-  { icon: 'door-open', name: 'Private Entrance', desc: 'Your own separate door — no shared hallways, total independence.' },
-  { icon: 'trees', name: 'Fully Fenced Backyard', desc: 'A private, fully fenced yard that belongs to the suite alone.' },
-  { icon: 'dog', name: 'Pet Friendly', desc: 'Bring the dog. The fenced yard makes it easy and worry-free.' },
-  { icon: 'calendar-check', name: 'No Minimum Stay', desc: 'Book one night or settle in for a season — your call.' },
+  { icon: 'door-open', name: 'Private Entrance', desc: 'Your very own door — no shared hallways, no neighbors to pass. Just yours.' },
+  { icon: 'trees', name: 'Fully Fenced Backyard', desc: 'A private, fully fenced yard that\u2019s yours to enjoy — morning coffee to evening unwind.' },
+  { icon: 'sun', name: 'Sunlit & Bright', desc: 'Big windows and warm Florida light from morning right through the evening.' },
+  { icon: 'coffee', name: 'Coffee Bar', desc: 'A coffee maker, mugs, and the basics to get your morning going.' },
   { icon: 'chef-hat', name: 'Full Kitchenette', desc: 'Fridge, cooktop, microwave, toaster oven, coffee maker & cookware.' },
   { icon: 'shower-head', name: 'Walk-In Glass Shower', desc: 'Fresh marble-tile bath with a frameless glass walk-in shower.' },
   { icon: 'tv', name: 'Smart TVs', desc: 'Wall-mounted smart TVs in the living room and bedroom.' },
@@ -252,7 +251,7 @@ const AMENITIES = [
   { icon: 'wifi', name: 'High-Speed Wi-Fi', desc: 'Reliable connection throughout — ideal for remote work.' },
   { icon: 'shield-check', name: 'Keyless Smart Lock', desc: 'Self check-in, 24/7, with a private keypad entry code.' },
   { icon: 'shopping-bag', name: 'Steps to Shopping', desc: 'Grocery, coffee, and dining under five minutes from the door.' },
-  { icon: 'bed-double', name: 'Queen Bedroom', desc: 'A restful, private bedroom with a closet and garden-side window.' },
+  { icon: 'bed-double', name: 'Queen Bedroom', desc: 'A restful, cozy bedroom with a closet and a sunny window onto the yard.' },
 ];
 
 function Amenities() {
@@ -260,9 +259,9 @@ function Amenities() {
     <section className="section cream" id="amenities">
       <div className="container">
         <div className="sec-head">
-          <div className="eb left">— Considered details —</div>
-          <h2>Small footprint,<br /><em>every comfort.</em></h2>
-          <p className="lede">Compact, private, and complete — the suite was finished with longer stays in mind, so the first morning feels as settled as the tenth.</p>
+          <div className="eb left">— Thoughtful touches —</div>
+          <h2>Cozy by design,<br /><em>down to the details.</em></h2>
+          <p className="lede">Every detail was chosen with care — so from the moment you step inside, the suite feels calm, comfortable, and ready for you.</p>
         </div>
         <div className="am-grid">
           {AMENITIES.map((a, i) => (
@@ -290,7 +289,7 @@ const GALLERY = [
   { src: photos.bathShower,    tag: 'Walk-In Glass Shower',   cls: 'g-6' },
   { src: photos.kitchenEntry,  tag: 'Private Entrance',       cls: 'g-7' },
   { src: photos.bedroomCloset, tag: 'Bedroom & Closet',       cls: 'g-3' },
-  { src: photos.bedroomAngle,  tag: 'Bedroom · Garden View',  cls: 'g-4' },
+  { src: photos.bedroomAngle,  tag: 'Bedroom · Yard View',    cls: 'g-4' },
 ];
 
 function Gallery({ onOpen }) {
@@ -566,7 +565,7 @@ function Booking() {
 
             <div className="book-trust">
               <strong>Best price, direct.</strong> No added booking fees when you book
-              with us directly. No minimum stay. Free cancellation up to 14 days before arrival.
+              with us directly. Free cancellation up to 14 days before arrival.
             </div>
           </div>
         </div>
@@ -583,8 +582,8 @@ function PullQuote() {
     <section className="pull-quote">
       <div className="container">
         <blockquote>
-          &ldquo;Your own door, your own garden, your own quiet.<br />
-          <em>Boutique comfort — without the minimum stay.</em>&rdquo;
+          &ldquo;Your own door, your own yard, your own quiet.<br />
+          <em>Boutique comfort, in the heart of St. Pete.</em>&rdquo;
         </blockquote>
       </div>
     </section>
@@ -750,8 +749,8 @@ function Contact() {
               We can&rsquo;t wait<br /><em style={{ fontStyle: 'italic', color: 'var(--color-gold-400)' }}>to host you.</em>
             </h2>
             <p style={{ color: 'rgba(250,247,240,0.72)', fontSize: 17, lineHeight: 1.7, fontWeight: 300, marginBottom: 36 }}>
-              Tell us a little about your visit — dates, the kind of trip, whether the dog is
-              coming along. Amanda personally replies to every inquiry, usually within an hour
+              Tell us a little about your visit — your dates, the kind of trip, and anything
+              you&rsquo;d like us to help arrange. Amanda personally replies to every inquiry, usually within an hour
               during business hours.
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
@@ -775,11 +774,11 @@ function Contact() {
               </a>
               <div style={{ display: 'flex', alignItems: 'center', gap: 16, color: 'var(--color-cream-50)' }}>
                 <div style={{ width: 44, height: 44, borderRadius: '50%', border: '1px solid var(--color-gold-500)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-gold-400)' }}>
-                  <Icon name="dog" size={18} stroke={1.6} />
+                  <Icon name="shield-check" size={18} stroke={1.6} />
                 </div>
                 <div>
                   <div style={{ fontFamily: 'var(--font-sc)', fontSize: 10, letterSpacing: 'var(--ls-widest)', color: 'var(--color-gold-400)', textTransform: 'uppercase' }}>Good to know</div>
-                  <div style={{ fontFamily: 'var(--font-display)', fontSize: 22 }}>Pet friendly · No minimum stay</div>
+                  <div style={{ fontFamily: 'var(--font-display)', fontSize: 22 }}>Private entrance · Easy self check-in</div>
                 </div>
               </div>
             </div>
@@ -806,7 +805,7 @@ function Contact() {
                 <div className="field"><label>Check-out</label><input type="date" name="Check-out" /></div>
                 <div className="field full">
                   <label>Tell us about your stay</label>
-                  <textarea name="message" placeholder="Number of guests, traveling with a pet, occasion, any questions..." />
+                  <textarea name="message" placeholder="Number of guests, occasion, any questions..." />
                 </div>
                 <div className="full">
                   <button type="submit" disabled={status === 'sending'} className="btn btn-gold" style={{ width: '100%', justifyContent: 'center', padding: '18px', opacity: status === 'sending' ? 0.7 : 1 }}>
@@ -941,7 +940,7 @@ function MarketingStyles() {
 
 const GUARANTEES = [
   { icon:'badge-dollar-sign', t:'Best Price, Direct',   d:'Book here and skip every added booking fee.' },
-  { icon:'calendar-check',    t:'No Minimum Stay',      d:'One night or one season — entirely your call.' },
+  { icon:'key-round',         t:'Easy Self Check-In', d:'Keyless entry, 24/7 — arrive on your own schedule.' },
   { icon:'shield-check',      t:'Free Cancellation',    d:'Cancel at no cost up to 14 days before arrival.' },
   { icon:'message-circle',    t:'Replies in ~1 Hour',   d:'A real local host, usually answering within the hour.' },
 ];
