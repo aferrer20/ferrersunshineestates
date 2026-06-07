@@ -76,29 +76,45 @@ function Icon({ name, size = 20, stroke = 1.5, style }) {
 // ============================================================
 function Nav({ onBookClick }) {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   useEffect(() => {
     const h = () => setScrolled(window.scrollY > 60);
     window.addEventListener('scroll', h, { passive: true });
     h();
     return () => window.removeEventListener('scroll', h);
   }, []);
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
+  const links = [
+    { href: '#residence', label: 'The Residence' },
+    { href: 'the-suite.html', label: 'The Suite' },
+    { href: '#gallery', label: 'Gallery' },
+    { href: '#book', label: 'Availability' },
+    { href: '#location', label: 'St. Petersburg' },
+    { href: '#contact', label: 'Contact' },
+  ];
   return (
-    <nav className={`nav ${scrolled ? 'scrolled' : ''}`}>
+    <nav className={`nav ${scrolled ? 'scrolled' : ''} ${menuOpen ? 'menu-active' : ''}`}>
       <div className="container nav-inner">
-        <a href="#top" className="logo" aria-label="Ferrer Sunshine Estates home">
+        <a href="#top" className="logo" aria-label="Ferrer Sunshine Estates home" onClick={() => setMenuOpen(false)}>
           <span className="logo-mark">Ferrer</span>
           <span className="logo-sub">— Sunshine Estates —</span>
         </a>
         <div className="nav-links">
-          <a href="#residence">The Residence</a>
-          <a href="the-suite.html">The Suite</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#book">Availability</a>
-          <a href="#location">St. Petersburg</a>
-          <a href="#contact">Contact</a>
+          {links.map(l => <a key={l.href} href={l.href}>{l.label}</a>)}
         </div>
         <button className="nav-cta" onClick={onBookClick}>Book Direct</button>
-        <button className="menu-btn" aria-label="Menu"><Icon name="menu" size={22} /></button>
+        <button className="menu-btn" aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen} onClick={() => setMenuOpen(o => !o)}>
+          <Icon name={menuOpen ? 'x' : 'menu'} size={24} />
+        </button>
+      </div>
+      <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
+        {links.map(l => (
+          <a key={l.href} href={l.href} onClick={() => setMenuOpen(false)}>{l.label}</a>
+        ))}
+        <button className="mobile-menu-cta" onClick={() => { setMenuOpen(false); onBookClick(); }}>Book Direct</button>
       </div>
     </nav>
   );
