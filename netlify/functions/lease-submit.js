@@ -15,8 +15,6 @@
 //   MAIL_CC          optional — extra OWNER-SIDE recipients, comma separated.
 //                    Do NOT put a client address here; the client gets their own
 //                    email automatically. This copy contains the internal record.
-//   MAIL_CC_CLIENT   optional — comma separated, copied on the CLIENT email only
-//                    (e.g. a producer who should see the payment link).
 
 const esc = (s) =>
   String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -79,7 +77,6 @@ exports.handler = async (event) => {
   const site = (process.env.SITE_URL || '').replace(/\/$/, '');
   const list = (v) => (v || '').split(',').map((s) => s.trim()).filter(Boolean);
   const ccOwner = list(process.env.MAIL_CC);
-  const ccClient = list(process.env.MAIL_CC_CLIENT);
   const payUrl = d.payUrl ? (d.payUrl.startsWith('http') ? d.payUrl : `${site}/${d.payUrl.replace(/^\//, '')}`) : '';
 
   if (!org.email || !org.company || !org.signer) {
@@ -131,8 +128,7 @@ ${payUrl ? `<p style="margin:0 0 26px">${btn(payUrl, 'Make a Payment', true)}</p
 
   let clientSent = true;
   try {
-    const clientTo = [org.email, ...ccClient.filter((a) => a.toLowerCase() !== org.email.toLowerCase())];
-    await send({ from: FROM, to: clientTo, reply_to: TO, subject: 'Your reservation with Ferrer Sunshine Estates', html: clientHtml }, KEY);
+    await send({ from: FROM, to: [org.email], reply_to: TO, subject: 'Your reservation with Ferrer Sunshine Estates', html: clientHtml }, KEY);
   } catch (e) {
     clientSent = false;
   }
