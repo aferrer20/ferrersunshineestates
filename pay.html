@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Make a Payment | Ferrer Sunshine Estates</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" href="tokens.css" />
+<link rel="stylesheet" href="lease.css" />
+<style>
+.pay-wrap{max-width:760px;margin:0 auto;padding:0 24px 100px}
+.pay-summary{background:var(--color-cream-50);border:1px solid var(--color-cream-300);border-top:3px solid var(--color-gold-500);border-radius:var(--radius-sm);padding:28px 32px;margin-top:40px;box-shadow:var(--shadow-sm)}
+.pay-summary .ps-row{display:flex;justify-content:space-between;gap:20px;padding:9px 0;font-size:14.5px;border-bottom:1px solid var(--color-cream-200)}
+.pay-summary .ps-row:last-child{border-bottom:none}
+.pay-summary .ps-row span:first-child{color:var(--color-cream-600)}
+.pay-summary .ps-row span:last-child{color:var(--color-charcoal);font-weight:500;text-align:right}
+.pay-summary h3{font-family:var(--font-display);font-size:26px;font-weight:600;margin:0 0 16px;color:var(--color-charcoal)}
+.paycard{background:var(--color-cream-50);border:1px solid var(--color-cream-300);border-left:3px solid var(--color-green-500);border-radius:var(--radius-sm);padding:30px 32px;margin-top:22px;box-shadow:var(--shadow-sm);display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}
+.paycard.second{border-left-color:var(--color-gold-500)}
+.paycard .pc-step{font-family:var(--font-sc);font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--color-gold-600);margin-bottom:8px}
+.paycard h4{font-family:var(--font-display);font-size:28px;font-weight:600;margin:0 0 8px;color:var(--color-charcoal);line-height:1.15}
+.paycard p{font-size:13.5px;line-height:1.6;color:var(--color-cream-600);margin:0;max-width:34ch}
+.paycard .pc-right{display:flex;flex-direction:column;align-items:flex-end;gap:14px}
+.paycard .pc-amt{font-family:var(--font-display);font-size:38px;font-weight:600;color:var(--color-green-800);line-height:1;font-variant-numeric:tabular-nums}
+.paycard .btn{text-decoration:none;white-space:nowrap}
+.paynote{margin-top:32px;padding:24px 28px;border:1px solid var(--color-gold-500);background:var(--color-gold-100);border-radius:var(--radius-sm)}
+.paynote b{display:block;font-family:var(--font-sc);font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--color-gold-700);margin-bottom:8px}
+.paynote p{font-size:13.5px;line-height:1.7;color:var(--color-cream-700);margin:0;max-width:none}
+@media(max-width:620px){.paycard{flex-direction:column;align-items:flex-start}.paycard .pc-right{align-items:flex-start;width:100%}}
+</style>
+</head>
+<body>
+<header class="lp-mast">
+<div class="lm-name">Ferrer</div>
+<div class="lm-sub">— Sunshine Estates —</div>
+<div class="lm-rule"></div>
+<h1>Make a Payment</h1>
+<div class="lm-meta">Secure Invoicing via Chase</div>
+</header>
+<div class="pay-wrap">
+<div class="pay-summary">
+<h3>Reservation Summary</h3>
+<div class="ps-row"><span>Property</span><span>2801 65th Way N, Saint Petersburg, FL 33710</span></div>
+<div class="ps-row"><span>Term</span><span>August 23 – October 5, 2026</span></div>
+<div class="ps-row"><span>Configuration</span><span>3 Bedroom / 3 Bath · fully furnished</span></div>
+<div class="ps-row"><span>Contract total</span><span id="ps-total">—</span></div>
+</div>
+<div class="paycard">
+<div>
+<div class="pc-step">Payment 01</div>
+<h4>Deposit</h4>
+<p>50% of the contract total, due at signing. Reserves your dates.</p>
+</div>
+<div class="pc-right">
+<div class="pc-amt" id="amt-deposit">—</div>
+<a class="btn btn-primary" id="link-deposit" href="#" target="_blank" rel="noopener noreferrer">Pay Deposit</a>
+</div>
+</div>
+<div class="paycard second">
+<div>
+<div class="pc-step">Payment 02</div>
+<h4>Final Balance</h4>
+<p>Remaining 50%, due on or before August 23, 2026 — the first day of the term.</p>
+</div>
+<div class="pc-right">
+<div class="pc-amt" id="amt-balance">—</div>
+<a class="btn btn-outline" id="link-balance" href="#" target="_blank" rel="noopener noreferrer">Pay Balance</a>
+</div>
+</div>
+<div class="paynote">
+<b>Before you pay</b>
+<p>Amounts shown reflect the base contract. If a pet or rental vehicle was added to your registration, the itemized invoice you received by email is the controlling amount. Keys are released once the balance is paid in full. Questions about an invoice — contact us before paying.</p>
+</div>
+</div>
+<div class="foot">
+FERRER SUNSHINE ESTATES · ST. PETERSBURG, FL · <a href="mailto:Amanda@bpestatemgmt.com">Amanda@bpestatemgmt.com</a> · (727) 504-9949
+</div>
+<script>
+/* ── CONFIG ─────────────────────────────────────────────────
+   Update CONTRACT_TOTAL to the final agreed amount for this
+   client (include pet / vehicle add-ons if any).
+   Swap the invoice URLs when you issue new invoices.
+   ──────────────────────────────────────────────────────────── */
+var CONTRACT_TOTAL = 8800;
+var LINK_DEPOSIT = 'https://payments.chase.com/?invid=KMRPYR46YYYH';
+var LINK_BALANCE = 'https://payments.chase.com/?invid=KMRPYR46YYZ2';
+
+/* A signed registration links here as pay.html?total=9050&co=freeFall%20Theatre
+   — the total and company name below are overridden when those are present. */
+var params = new URLSearchParams(location.search);
+var qTotal = parseFloat(params.get('total'));
+if (!isNaN(qTotal) && qTotal > 0) CONTRACT_TOTAL = qTotal;
+var qCo = params.get('co');
+if (qCo) {
+  var row = document.createElement('div');
+  row.className = 'ps-row';
+  row.innerHTML = '<span>Lessee<\/span><span><\/span>';
+  row.lastChild.textContent = qCo;
+  document.getElementById('ps-total').parentNode.parentNode.insertBefore(row, document.getElementById('ps-total').parentNode);
+}
+
+var usd = function (n) { return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); };
+var half = Math.round(CONTRACT_TOTAL * 50) / 100;
+document.getElementById('ps-total').textContent = usd(CONTRACT_TOTAL);
+document.getElementById('amt-deposit').textContent = usd(half);
+document.getElementById('amt-balance').textContent = usd(CONTRACT_TOTAL - half);
+document.getElementById('link-deposit').href = LINK_DEPOSIT;
+document.getElementById('link-balance').href = LINK_BALANCE;
+</script>
+</body>
+</html>
