@@ -1,8 +1,14 @@
-# Netlify configuration for Ferrer Sunshine Estates
-# Static site (no build step) + serverless function for live Airbnb calendar sync.
+[build.environment]
+  NODE_VERSION = "18"
 
-[build]
-  publish = "."
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
 
-[functions]
-  directory = "netlify/functions"
+[[headers]]
+  for = "/leasing-registration.html"
+  [headers.values]
+    Cache-Control = "no-store"
