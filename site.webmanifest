@@ -1,0 +1,13 @@
+{
+  "name": "Ferrer Sunshine Estates",
+  "short_name": "Ferrer Sunshine",
+  "description": "Luxury short term and monthly vacation rentals in St. Petersburg, Florida.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF7F0",
+  "theme_color": "#2C4A3E",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
