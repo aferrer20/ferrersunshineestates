@@ -863,10 +863,10 @@ function Footer() {
         <div className="foot-bottom">
           <div>© 2026 Ferrer Sunshine Estates · Operated by Baez Perez Estate Management LLC</div>
           <div style={{ display: 'flex', gap: 24 }}>
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-            <a href="#">Accessibility</a>
-            <a href="#">House Rules</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="accessibility.html">Accessibility</a>
+            <a href="house-rules.html">House Rules</a>
           </div>
         </div>
       </div>

@@ -16,20 +16,33 @@
 <meta name="geo.region" content="US-FL" />
 <meta name="geo.placename" content="St. Petersburg" />
 
+<!-- Icons -->
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#2C4A3E" />
+
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Ferrer Sunshine Estates" />
 <meta property="og:title" content="Ferrer Sunshine Estates — Luxury Short Term Rentals in St. Petersburg, FL" />
 <meta property="og:description" content="Fully-furnished, sun-soaked getaways in St. Petersburg, Florida. Book direct and save on monthly &amp; extended stays." />
 <meta property="og:url" content="https://www.ferrersunshineestates.com/" />
-<meta property="og:image" content="1-1000023735.jpg" />
+<meta property="og:image" content="https://www.ferrersunshineestates.com/1-1000023735.jpg" />
+<meta property="og:image:width" content="1920" />
+<meta property="og:image:height" content="1280" />
 <meta property="og:locale" content="en_US" />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Ferrer Sunshine Estates — St. Petersburg, FL" />
 <meta name="twitter:description" content="Luxury fully-furnished short term &amp; monthly rentals on Florida's sun-drenched Gulf Coast." />
-<meta name="twitter:image" content="1-1000023735.jpg" />
+<meta name="twitter:image" content="https://www.ferrersunshineestates.com/1-1000023735.jpg" />
+
+<!-- LCP hint: first hero slide -->
+<link rel="preload" as="image" href="1-1000023735.jpg" fetchpriority="high" />
 
 <!-- JSON-LD: LodgingBusiness -->
 <script type="application/ld+json">
@@ -64,6 +77,58 @@
     {"@type": "LocationFeatureSpecification", "name": "Smart TV", "value": true}
   ],
   "starRating": {"@type": "Rating", "ratingValue": "5"}
+}
+</script>
+
+<!-- JSON-LD: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.ferrersunshineestates.com/" },
+    { "@type": "ListItem", "position": 2, "name": "The Residence · 2BR", "item": "https://www.ferrersunshineestates.com/" }
+  ]
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the minimum stay?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Our minimum stay is one month (28 nights), which lets us offer the kind of slow, settled-in experience the home was designed for. Stays of 7+ nights may be considered seasonally — please inquire." }
+    },
+    {
+      "@type": "Question",
+      "name": "How does direct booking save me money?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Booking platforms typically add service fees on top of the nightly rate. Booking direct removes those fees entirely. You'll also have direct communication with Amanda, our property manager, for any custom requests." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the home pet-friendly?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — we welcome well-behaved dogs (please mention your pet when inquiring; a small pet fee applies). The fully fenced backyard makes it especially comfortable for furry guests." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the property suitable for traveling nurses or remote workers?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. We offer high-speed internet, a quiet dedicated workspace, and flexible 13-week+ contract options for traveling medical professionals." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is included in the rate?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Everything but the cleaning fee — a full kitchen with cookware, linens, towels, basic toiletries, paper goods, dish soap, and laundry detergent. You arrive, unpack, and settle in." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you arrange airport transfers and the boat experiences?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — concierge airport pickup, grocery pre-stocking, and our exclusive 5-hour and 8-hour Gulf Coast charters are all available. Mention them in your inquiry and we'll line everything up." }
+    }
+  ]
 }
 </script>
 
