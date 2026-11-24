@@ -34,8 +34,6 @@ const TAXES_PCT    = 0;     // taxes collected by Airbnb / at booking
 const REVIEW_LINKS = {
   airbnb:    'https://www.airbnb.com/rooms/1701614279495081800',
   google:    'https://share.google/tKzBJUTXT5P09tRue',
-  vrbo:      'https://www.vrbo.com/YOUR_VRBO_LISTING',
-  furnished: 'https://www.furnishedfinder.com/members/profile/YOUR_FF_ID',
 };
 
 // ============================================================
@@ -162,8 +160,6 @@ function ChannelBar() {
         <div className="channel-label">Also listed on</div>
         <div className="channel-logos">
           <a className="ch" href={REVIEW_LINKS.airbnb} target="_blank" rel="noopener" style={{ textDecoration:'none' }}><span className="dot" /> Airbnb</a>
-          <a className="ch" href={REVIEW_LINKS.vrbo} target="_blank" rel="noopener" style={{ textDecoration:'none' }}><span className="dot" /> Vrbo</a>
-          <a className="ch" href={REVIEW_LINKS.furnished} target="_blank" rel="noopener" style={{ textDecoration:'none' }}><span className="dot" /> Furnished Finder</a>
           <a className="ch" href={REVIEW_LINKS.google} target="_blank" rel="noopener" style={{ textDecoration:'none' }}><span className="dot" /> Google ★★★★★ (15)</a>
         </div>
         <div className="channel-label" style={{ color: 'var(--color-green-800)' }}>Book direct & save</div>

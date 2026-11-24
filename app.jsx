@@ -184,8 +184,6 @@ function ChannelBar() {
         <div className="channel-label">Also listed on</div>
         <div className="channel-logos">
           <a className="ch" href={REVIEW_LINKS.airbnb} target="_blank" rel="noopener" style={{ textDecoration:'none' }}><span className="dot" /> Airbnb</a>
-          <a className="ch" href={REVIEW_LINKS.vrbo} target="_blank" rel="noopener" style={{ textDecoration:'none' }}><span className="dot" /> Vrbo</a>
-          <a className="ch" href={REVIEW_LINKS.furnished} target="_blank" rel="noopener" style={{ textDecoration:'none' }}><span className="dot" /> Furnished Finder</a>
           <a className="ch" href={REVIEW_LINKS.google} target="_blank" rel="noopener" style={{ textDecoration:'none' }}><span className="dot" /> Google</a>
         </div>
         <div className="channel-label" style={{ color: 'var(--color-green-800)' }}>Book direct & save</div>
@@ -669,8 +667,6 @@ function BoatExperiences() {
 const REVIEW_LINKS = {
   airbnb:    'https://www.airbnb.com/rooms/1448873183102250785',
   google:    'https://share.google/tKzBJUTXT5P09tRue',
-  vrbo:      'https://www.vrbo.com/YOUR_VRBO_LISTING',
-  furnished: 'https://www.furnishedfinder.com/members/profile/YOUR_FF_ID',
 };
 
 function Reviews() {
@@ -832,16 +828,13 @@ function ChannelSync() {
               Synced in real time<br /><em style={{ fontStyle: 'italic', color: 'var(--color-gold-600)' }}>with where you book.</em>
             </h2>
             <p style={{ fontSize: 17, lineHeight: 1.7, color: 'var(--color-cream-700)', marginBottom: 22, fontWeight: 300 }}>
-              The availability you see here mirrors every channel — Airbnb, Vrbo, and
-              Furnished Finder. Pick your platform of choice, or book direct and skip
-              the service fees.
+              The availability you see here mirrors Airbnb in real time.
+              Book there, or book direct and skip the service fees.
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 14, marginTop: 32 }}>
               {[
-                { name: 'Airbnb',           meta: 'View listing →', icon: 'home',              href: REVIEW_LINKS.airbnb },
-                { name: 'Vrbo',             meta: 'View listing →', icon: 'house',             href: REVIEW_LINKS.vrbo },
-                { name: 'Google',           meta: 'Read reviews →', icon: 'globe',             href: REVIEW_LINKS.google },
-                { name: 'Furnished Finder', meta: 'Pro listing →',  icon: 'briefcase-medical', href: REVIEW_LINKS.furnished },
+                { name: 'Airbnb', meta: 'View listing →', icon: 'home',  href: REVIEW_LINKS.airbnb },
+                { name: 'Google', meta: 'Read reviews →', icon: 'globe', href: REVIEW_LINKS.google },
               ].map((c, i) => (
                 <a key={i} href={c.href} target="_blank" rel="noopener" style={{
                   textDecoration:'none',
