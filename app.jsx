@@ -676,7 +676,7 @@ const REVIEW_LINKS = {
 function Reviews() {
   const platforms = [
     { name: 'Airbnb', href: REVIEW_LINKS.airbnb, icon: 'home' },
-    { name: 'Google', href: REVIEW_LINKS.google, icon: 'globe' },
+    { name: 'Google', href: REVIEW_LINKS.google, icon: 'globe', count: 15 },
   ];
   return (
     <section className="section blush">
@@ -704,7 +704,9 @@ function Reviews() {
                 <Icon name={p.icon} size={20} stroke={1.6} />
               </div>
               <div style={{ fontFamily:'var(--font-display)', fontSize:24, color:'var(--color-green-900)', fontWeight:500, lineHeight:1.1 }}>{p.name}</div>
-              <div style={{ color:'var(--color-gold-500)', fontSize:16, letterSpacing:'3px' }}>★★★★★</div>
+              <div style={{ color:'var(--color-gold-500)', fontSize:16, letterSpacing:'3px' }}>
+                ★★★★★{p.count ? <span style={{ color:'var(--color-cream-600)', fontSize:13, letterSpacing:'normal', marginLeft:8 }}>({p.count})</span> : null}
+              </div>
               <div style={{ fontFamily:'var(--font-sc)', fontSize:10, letterSpacing:'var(--ls-widest)', color:'var(--color-cream-700)', textTransform:'uppercase' }}>
                 Read reviews →
               </div>

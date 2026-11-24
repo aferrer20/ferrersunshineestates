@@ -164,7 +164,7 @@ function ChannelBar() {
           <a className="ch" href={REVIEW_LINKS.airbnb} target="_blank" rel="noopener" style={{ textDecoration:'none' }}><span className="dot" /> Airbnb</a>
           <a className="ch" href={REVIEW_LINKS.vrbo} target="_blank" rel="noopener" style={{ textDecoration:'none' }}><span className="dot" /> Vrbo</a>
           <a className="ch" href={REVIEW_LINKS.furnished} target="_blank" rel="noopener" style={{ textDecoration:'none' }}><span className="dot" /> Furnished Finder</a>
-          <a className="ch" href={REVIEW_LINKS.google} target="_blank" rel="noopener" style={{ textDecoration:'none' }}><span className="dot" /> Google</a>
+          <a className="ch" href={REVIEW_LINKS.google} target="_blank" rel="noopener" style={{ textDecoration:'none' }}><span className="dot" /> Google ★★★★★ (15)</a>
         </div>
         <div className="channel-label" style={{ color: 'var(--color-green-800)' }}>Book direct & save</div>
       </div>
