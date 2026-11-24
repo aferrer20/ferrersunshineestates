@@ -141,20 +141,21 @@
   /* ============================================================
      BORDER RADII
      ============================================================ */
-  --radius-xs:   2px;
-  --radius-sm:   4px;
-  --radius-md:   8px;
-  --radius-lg:   16px;
+  --radius-xs:   10px;
+  --radius-sm:   18px;
+  --radius-md:   26px;
+  --radius-lg:   36px;
+  --radius-xl:   48px;
   --radius-full: 9999px;
 
   /* ============================================================
      SHADOWS
      ============================================================ */
-  --shadow-sm:   0 1px 4px rgba(44, 74, 62, 0.10);
-  --shadow-md:   0 4px 24px rgba(44, 74, 62, 0.12);
-  --shadow-lg:   0 8px 48px rgba(44, 74, 62, 0.18);
-  --shadow-xl:   0 16px 64px rgba(44, 74, 62, 0.24);
-  --shadow-gold: 0 4px 24px rgba(201, 169, 110, 0.20);
+  --shadow-sm:   0 2px 10px rgba(44, 74, 62, 0.08);
+  --shadow-md:   0 10px 34px rgba(44, 74, 62, 0.10);
+  --shadow-lg:   0 18px 60px rgba(44, 74, 62, 0.14);
+  --shadow-xl:   0 26px 84px rgba(44, 74, 62, 0.20);
+  --shadow-gold: 0 10px 34px rgba(201, 169, 110, 0.18);
 
   /* ============================================================
      TRANSITIONS
