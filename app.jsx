@@ -668,7 +668,7 @@ function BoatExperiences() {
 // External listing & review URLs — replace placeholders with your real links
 const REVIEW_LINKS = {
   airbnb:    'https://www.airbnb.com/rooms/1448873183102250785',
-  google:    'https://www.google.com/search?q=Ferrer+Sunshine+Estates+St+Petersburg+reviews',
+  google:    'https://share.google/tKzBJUTXT5P09tRue',
   vrbo:      'https://www.vrbo.com/YOUR_VRBO_LISTING',
   furnished: 'https://www.furnishedfinder.com/members/profile/YOUR_FF_ID',
 };
