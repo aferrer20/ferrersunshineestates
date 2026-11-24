@@ -672,7 +672,7 @@ const REVIEW_LINKS = {
 function Reviews() {
   const platforms = [
     { name: 'Airbnb', href: REVIEW_LINKS.airbnb, icon: 'home' },
-    { name: 'Google', href: REVIEW_LINKS.google, icon: 'globe', count: 15 },
+    { name: 'Google', href: REVIEW_LINKS.google, icon: 'globe' },
   ];
   return (
     <section className="section blush">
@@ -680,7 +680,6 @@ function Reviews() {
         <div className="sec-head centered">
           <div className="eb">— What guests are saying —</div>
           <h2>Five stars on <em>Airbnb &amp; Google.</em></h2>
-          <p className="lede">We don&rsquo;t curate or rewrite our reviews. Read every word from every guest, directly on the platform of your choice.</p>
         </div>
         <div className="rev-platform-grid" style={{ display:'grid', gridTemplateColumns:'repeat(2,1fr)', gap:18, maxWidth:680, margin:'0 auto' }}>
           {platforms.map((p, i) => (
@@ -700,9 +699,7 @@ function Reviews() {
                 <Icon name={p.icon} size={20} stroke={1.6} />
               </div>
               <div style={{ fontFamily:'var(--font-display)', fontSize:24, color:'var(--color-green-900)', fontWeight:500, lineHeight:1.1 }}>{p.name}</div>
-              <div style={{ color:'var(--color-gold-500)', fontSize:16, letterSpacing:'3px' }}>
-                ★★★★★{p.count ? <span style={{ color:'var(--color-cream-600)', fontSize:13, letterSpacing:'normal', marginLeft:8 }}>({p.count})</span> : null}
-              </div>
+              <div style={{ color:'var(--color-gold-500)', fontSize:16, letterSpacing:'3px' }}>★★★★★</div>
               <div style={{ fontFamily:'var(--font-sc)', fontSize:10, letterSpacing:'var(--ls-widest)', color:'var(--color-cream-700)', textTransform:'uppercase' }}>
                 Read reviews →
               </div>
