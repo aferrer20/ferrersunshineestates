@@ -981,6 +981,7 @@ function App() {
       <MarketingStyles />
       <Nav onBookClick={onBookClick} />
       <Hero onBookClick={onBookClick} />
+      <ChannelBar />
       <StatRow />
       <Welcome />
       <Amenities />

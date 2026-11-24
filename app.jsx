@@ -1132,6 +1132,7 @@ function App() {
     <>
       <Nav onBookClick={onBookClick} />
       <Hero onBookClick={onBookClick} />
+      <ChannelBar />
       <StatRow />
       <Welcome />
       <Amenities />
@@ -1141,6 +1142,7 @@ function App() {
       <WhyDirect />
       <BoatExperiences />
       <Location />
+      <Reviews />
       <FAQ />
       <Contact />
       <Footer />
